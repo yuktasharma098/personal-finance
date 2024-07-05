@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.ant-layout {
+  min-height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.custom-header {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 0 20px; /* Adjusted padding to fit content better */
+  font-family: 'Poppins', sans-serif;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 60px;
+  height: auto;
+  margin-right: 8px;
+  border-radius: 30px;
+}
+
+.logo-text {
+  font-weight: 600;
+  font-size: 1.5rem;
+  background: -webkit-linear-gradient(left, #2563eb, #3498db);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.custom-menu {
+  flex-grow: 1; /* Allow the menu to take up available space */
+  display: flex;
+  justify-content: flex-end; /* Align menu items to the end */
+  background-color: transparent;
+  border-bottom: none;
+}
+
+.custom-menu-item {
+  display: flex;
+  align-items: center;
+  color: black !important;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.ant-menu-horizontal > .ant-menu-item::after {
+  border-bottom: none !important;
+}
+
+.ant-anchor-wrapper {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ant-anchor-link-title {
+  color: #3498db !important;
 }
